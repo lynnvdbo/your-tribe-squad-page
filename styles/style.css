@@ -3,7 +3,7 @@ h1, h3 {
 }
 
 h2 {
-    margin-left: 70px;
+    margin-left: 25px;
 }
 
 p {
@@ -21,10 +21,11 @@ p {
 }
 
 .photogrid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
 }
 
 .personphoto-wrapper {
@@ -61,10 +62,11 @@ p {
 }
 
 .campusphotogrid {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 50px;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
 }
 
 .campusphoto {
