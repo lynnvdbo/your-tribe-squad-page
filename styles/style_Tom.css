@@ -1,11 +1,16 @@
+/* Algemene stijlen */
 body {
     background: rgb(35, 35, 35);
-    font-family: MonsterratSemiBold;
+    font-family: MontserratSemiBold, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
 }
 
-h1, h3, h4{
+h1, h3, h4 {
     text-align: center;
     color: white;
+    margin: 0.5em 0;
 }
 
 h2 {
@@ -16,13 +21,16 @@ h2 {
 
 p {
     color: white;
+    margin: 5px 0;
 }
 
+/* Font-face */
 @font-face {
-  font-family: MonsterratSemiBold;
-  src: url(../assets/font/Montserrat-Regular.ttf);
+    font-family: MontserratSemiBold;
+    src: url(../assets/font/Montserrat-Regular.ttf);
 }
 
+/* Photogrid (Over ons) */
 .photogrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
@@ -61,17 +69,18 @@ p {
     text-align: center;
 }
 
+/* Campus grid - desktop */
 .campus-wrapper {
-  max-width: calc(4 * 300px + 3 * 85px);
-  margin: 0 auto;
+    max-width: calc(4 * 300px + 3 * 135px);
+    margin: 0 auto;
 }
 
 .campusphotogrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 85px;
-  justify-content: center;
-  place-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 135px;
+    justify-content: center;
+    place-items: center;
 }
 
 .campusphotolist {
@@ -92,13 +101,49 @@ p {
     object-fit: cover;
 }
 
-@media (width <= 600px) {
-  h2 {
-    margin-left: 0px;
-    text-align: center;
-  }
+/* Mobile carrousel */
+@media (max-width: 550px) {
+    .campus-wrapper {
+        max-width: 100%;
+        overflow-x: auto;
+    }
 
-  .campusphotogrid {
-    place-items: center;
-  }
+    .campusphotogrid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 10px;
+        padding-left: 10px; /* eerste foto zichtbaar */
+    }
+
+    .campusphotolist {
+        flex: 0 0 250px;       /* vaste breedte per item */
+        height: 200px;
+        scroll-snap-align: start;
+        border-radius: 20px;
+        background-color: #333;
+        overflow: hidden;
+    }
+
+    .campusphoto {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+/* Tussenliggende schermen */
+@media (max-width: 1050px) {
+    .campusphotogrid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1437px) {
+    .campusphotogrid {
+        gap: 20px;
+    }
 }
