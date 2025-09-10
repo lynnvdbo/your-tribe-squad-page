@@ -9,24 +9,40 @@
 <body>
 
     <h1>Squad Page 1J</h1>
-    <hr />
 
     <h2>Ontdek Amstel Campus</h2>
 
-    <section class="campusphotogrid">
-        <article class="campusphotolist">
-            <img src="assets/img/theo-thijssenhuis-hva-amsterdam.jpeg" alt="" class="campusphoto" />
-        </article>
-        <article class="campusphotolist">
-            <img src="assets/img/jakoba mulderhuis hva.jpg" alt="" class="campusphoto" />
-        </article>
-        <article class="campusphotolist">
-            <img src="assets/img/Kohn.png" alt="" class="campusphoto" />
-        </article>
-        <article class="campusphotolist">
-            <img src="assets/img/wibauthuis hva.jpg" alt="" class="campusphoto" />
-        </article>
-    </section>
+    <div class="carousel-wrapper">
+        <button class="carousel-btn left" onclick="scrollCampus(-1)">&#10094;</button>
+
+        <section class="campusphotogrid" id="campusCarousel">
+            <article class="campusphotolist">
+                <img src="assets/img/theo-thijssenhuis-hva-amsterdam.jpeg" alt="Theo Thijssenhuis" class="campusphoto" />
+            </article>
+            <article class="campusphotolist">
+                <img src="assets/img/jakoba mulderhuis hva.jpg" alt="Jakoba Mulderhuis" class="campusphoto" />
+            </article>
+            <article class="campusphotolist">
+                <img src="assets/img/Kohn.png" alt="Kohn gebouw" class="campusphoto" />
+            </article>
+            <article class="campusphotolist">
+                <img src="assets/img/wibauthuis hva.jpg" alt="Wibauthuis" class="campusphoto" />
+            </article>
+
+            <!-- ✅ Extra 3 nieuwe foto's -->
+            <article class="campusphotolist">
+                <img src="assets/img/Media (4).jpg"alt="Uitzicht" class="campusphoto" />
+            </article>
+            <article class="campusphotolist">
+                <img src="assets/img/Media (3).jpg" alt="Uitzicht" class="campusphoto" />
+            </article>
+            <article class="campusphotolist">
+                <img src="assets/img/wibauthuis.jpg" alt="Uitzicht" class="campusphoto" />
+            </article>
+        </section>
+
+        <button class="carousel-btn right" onclick="scrollCampus(1)">&#10095;</button>
+    </div>
 
     <hr/>
 
@@ -39,7 +55,6 @@
             </div>
             <p class="name">Naam</p>
         </article>
-        <!-- Herhaal voor meer personen -->
         <article class="photolist">
             <div class="personphoto-wrapper">
                 <img src="assets/img/temp_icon.jpg" alt="" class="scrollphoto" />
@@ -52,8 +67,17 @@
             </div>
             <p class="name">Naam</p>
         </article>
-        <!-- Voeg meer photolist-articles toe indien nodig -->
     </section>
 
+    <script>
+        function scrollCampus(direction) {
+            const carousel = document.getElementById("campusCarousel");
+            const scrollAmount = 270; // breedte van 1 foto + marge
+            carousel.scrollBy({
+                left: direction * scrollAmount,
+                behavior: "smooth"
+            });
+        }
+    </script>
 </body>
 </html>
