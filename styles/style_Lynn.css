@@ -1,16 +1,27 @@
 
 body{
     background-color: beige;
-    padding-left: 80px;
-    padding-right: 80px;
+    margin: 0;
 }
 
+main{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+header{
+    background-color: rgb(255, 194, 96);
+
+    padding-bottom: 5px;
+
+}
 
 h1 {
     text-align: center;
-    font-size: 40pt;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    font-size: 33pt;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 
 }
