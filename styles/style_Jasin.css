@@ -195,3 +195,17 @@ p {
   text-decoration: underline; /* underline bij hover/focus */
   outline: none;
 }
+
+/* ====== "Klik hier"-link stijl ====== */
+.clickhere {
+  color: lightblue;
+  font-size: 20px;       /* 🔥 groter gemaakt */
+  font-weight: bold;     /* extra opvallend */
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.clickhere:hover {
+  color: yellow;
+}
