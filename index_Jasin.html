@@ -1,83 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Squad Page 1J</title>
-    <link rel="stylesheet" href="styles/style_Jasin.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Squad Page 1J</title>
+  <!-- Optioneel: mooi lettertype -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style_Jasin.css" />
 </head>
 <body>
 
+  <div class="page">
     <h1>Squad Page 1J</h1>
 
     <h2>Ontdek Amstel Campus</h2>
 
-    <div class="carousel-wrapper">
-        <button class="carousel-btn left" onclick="scrollCampus(-1)">&#10094;</button>
+    <!-- Campus met pijltjes -->
+    <div class="campus-wrapper" style="position: relative;">
+      <button class="arrow-btn left" aria-label="Scroll links" onclick="scrollCampus(-1)">&#10094;</button>
 
-        <section class="campusphotogrid" id="campusCarousel">
-            <article class="campusphotolist">
-                <img src="assets/img/theo-thijssenhuis-hva-amsterdam.jpeg" alt="Theo Thijssenhuis" class="campusphoto" />
-            </article>
-            <article class="campusphotolist">
-                <img src="assets/img/jakoba mulderhuis hva.jpg" alt="Jakoba Mulderhuis" class="campusphoto" />
-            </article>
-            <article class="campusphotolist">
-                <img src="assets/img/Kohn.png" alt="Kohn gebouw" class="campusphoto" />
-            </article>
-            <article class="campusphotolist">
-                <img src="assets/img/wibauthuis hva.jpg" alt="Wibauthuis" class="campusphoto" />
-            </article>
+      <section class="campusphotogrid" id="campusCarousel">
+        <article class="campusphotolist">
+          <img src="assets/img/theo-thijssenhuis-hva-amsterdam.jpeg" alt="Theo Thijssenhuis" class="campusphoto" />
+        </article>
+        <article class="campusphotolist">
+          <img src="assets/img/jakoba mulderhuis hva.jpg" alt="Jakoba Mulderhuis" class="campusphoto" />
+        </article>
+        <article class="campusphotolist">
+          <img src="assets/img/Kohn.png" alt="Kohn gebouw" class="campusphoto" />
+        </article>
+        <article class="campusphotolist">
+          <img src="assets/img/wibauthuis hva.jpg" alt="Wibauthuis" class="campusphoto" />
+        </article>
+        <article class="campusphotolist">
+          <img src="assets/img/Media (4).jpg" alt="Uitzicht Amstel Campus 1" class="campusphoto" />
+        </article>
+        <article class="campusphotolist">
+          <img src="assets/img/Media (3).jpg" alt="Uitzicht Amstel Campus 2" class="campusphoto" />
+        </article>
+        <article class="campusphotolist">
+          <img src="assets/img/wibauthuis.jpg" alt="Wibauthuis bovenaanzicht" class="campusphoto" />
+        </article>
+        <article class="campusphotolist">
+          <img src="assets/img/shared image.jpg" alt="Kohn Uitzicht" class="campusphoto" />
+        </article>
+      </section>
 
-            <!-- ✅ Extra 3 nieuwe foto's -->
-            <article class="campusphotolist">
-                <img src="assets/img/Media (4).jpg"alt="Uitzicht" class="campusphoto" />
-            </article>
-            <article class="campusphotolist">
-                <img src="assets/img/Media (3).jpg" alt="Uitzicht" class="campusphoto" />
-            </article>
-            <article class="campusphotolist">
-                <img src="assets/img/wibauthuis.jpg" alt="Uitzicht" class="campusphoto" />
-            </article>
-        </section>
-
-        <button class="carousel-btn right" onclick="scrollCampus(1)">&#10095;</button>
+      <button class="arrow-btn right" aria-label="Scroll rechts" onclick="scrollCampus(1)">&#10095;</button>
     </div>
-
-    <hr/>
 
     <h3>Over ons</h3>
 
     <section class="photogrid">
-        <article class="photolist">
-            <div class="personphoto-wrapper">
-                <img src="assets/img/temp_icon.jpg" alt="" class="scrollphoto" />
-            </div>
-            <p class="name">Naam</p>
-        </article>
-        <article class="photolist">
-            <div class="personphoto-wrapper">
-                <img src="assets/img/temp_icon.jpg" alt="" class="scrollphoto" />
-            </div>
-            <p class="name">Naam</p>
-        </article>
-        <article class="photolist">
-            <div class="personphoto-wrapper">
-                <img src="assets/img/temp_icon.jpg" alt="" class="scrollphoto" />
-            </div>
-            <p class="name">Naam</p>
-        </article>
-    </section>
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Ahlam.JPG" alt="Ahlam" class="scrollphoto" />
+        </div>
+        <p class="name">Ahlam</p>
+      </article>
 
-    <script>
-        function scrollCampus(direction) {
-            const carousel = document.getElementById("campusCarousel");
-            const scrollAmount = 270; // breedte van 1 foto + marge
-            carousel.scrollBy({
-                left: direction * scrollAmount,
-                behavior: "smooth"
-            });
-        }
-    </script>
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Anass.JPG" alt="Anass" class="scrollphoto" />
+        </div>
+        <p class="name">Anass</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Ayoub.JPG" alt="Ayoub" class="scrollphoto" />
+        </div>
+        <p class="name">Ayoub</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Bronx-1.JPG" alt="Bronx" class="scrollphoto" />
+        </div>
+        <p class="name">Bronx</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Chama.JPG" alt="Chama" class="scrollphoto" />
+        </div>
+        <p class="name">Chama</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Heba.JPG" alt="Heba" class="scrollphoto" />
+        </div>
+        <p class="name">Heba</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Iman.JPG" alt="Iman" class="scrollphoto" />
+        </div>
+        <p class="name">Iman</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Jadon.JPG" alt="Jadon" class="scrollphoto" />
+        </div>
+        <p class="name">Jadon</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Jamie.JPG" alt="Jamie" class="scrollphoto" />
+        </div>
+        <p class="name">Jamie</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Jamil.JPG" alt="Jamil" class="scrollphoto" />
+        </div>
+        <p class="name">Jamil</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Jasin-2.JPG" alt="Jasin" class="scrollphoto" />
+        </div>
+        <p class="name">Jasin</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Julian.JPG" alt="Julian" class="scrollphoto" />
+        </div>
+        <p class="name">Julian</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Ké.JPG" alt="Ké" class="scrollphoto" />
+        </div>
+        <p class="name">Ké</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Kevin.JPG" alt="Kevin" class="scrollphoto" />
+        </div>
+        <p class="name">Kevin</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Kurollos.JPG" alt="Kurrollos" class="scrollphoto" />
+        </div>
+        <p class="name">Kurrollos</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Luc.JPG" alt="Luc" class="scrollphoto" />
+        </div>
+        <p class="name">Luc</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Luka.JPG" alt="Luka" class="scrollphoto" />
+        </div>
+        <p class="name">Luka</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Lynn.JPG" alt="Lynn" class="scrollphoto" />
+        </div>
+        <p class="name">Lynn</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Maarten.JPG" alt="Maarten" class="scrollphoto" />
+        </div>
+        <p class="name">Maarten</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Mathijs.JPG" alt="Mathijs" class="scrollphoto" />
+        </div>
+        <p class="name">Mathijs</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Meraichio.JPG" alt="Meraichio" class="scrollphoto" />
+        </div>
+        <p class="name">Meraichio</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Mete.jpeg" alt="Mete" class="scrollphoto" />
+        </div>
+        <p class="name">Mete</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Sadaf.JPG" alt="Sadaf" class="scrollphoto" />
+        </div>
+        <p class="name">Sadaf</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Sieuwke.JPG" alt="Sieuwke" class="scrollphoto" />
+        </div>
+        <p class="name">Sieuwke</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Tom.JPG" alt="Tom" class="scrollphoto" />
+        </div>
+        <p class="name">Tom</p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Yassine.JPG" alt="Yassine" class="scrollphoto" />
+        </div>
+        <p class="name">Yassine</p>
+      </article>
+    </section>
+  </div>
+
+  <!-- Scroll-script voor campus-pijltjes -->
+  <script>
+    function scrollCampus(direction) {
+      const carousel = document.getElementById("campusCarousel");
+      const scrollAmount = 250; // pixels per klik
+      carousel.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  </script>
+
 </body>
 </html>
