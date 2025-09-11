@@ -1,4 +1,3 @@
-/* Algemene stijlen */
 body {
     background: rgb(35, 35, 35);
     font-family: MontserratSemiBold, sans-serif;
@@ -24,13 +23,11 @@ p {
     margin: 5px 0;
 }
 
-/* Font-face */
 @font-face {
     font-family: MontserratSemiBold;
     src: url(../assets/font/Montserrat-Regular.ttf);
 }
 
-/* Photogrid (Over ons) */
 .photogrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
@@ -69,7 +66,6 @@ p {
     text-align: center;
 }
 
-/* Campus grid - desktop */
 .campus-wrapper {
     max-width: calc(4 * 300px + 3 * 135px);
     margin: 0 auto;
@@ -78,8 +74,7 @@ p {
 .campusphotogrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 135px;
-    justify-content: center;
+    gap: 50px;
     place-items: center;
 }
 
@@ -101,8 +96,37 @@ p {
     object-fit: cover;
 }
 
-/* Mobile carrousel */
+.link-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.link-wrapper a {
+    color: white;
+    text-decoration: none;
+    background-color: #444;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: MontserratSemiBold, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.link-wrapper a:hover {
+    background-color: #666;
+}
+
+
 @media (max-width: 550px) {
+    h2 {
+        margin-left: 0px;
+        text-align: center;
+    }
     .campus-wrapper {
         max-width: 100%;
         overflow-x: auto;
@@ -115,11 +139,11 @@ p {
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         gap: 10px;
-        padding-left: 10px; /* eerste foto zichtbaar */
+        padding-left: 10px;
     }
 
     .campusphotolist {
-        flex: 0 0 250px;       /* vaste breedte per item */
+        flex: 0 0 250px;
         height: 200px;
         scroll-snap-align: start;
         border-radius: 20px;
@@ -127,15 +151,19 @@ p {
         overflow: hidden;
     }
 
-    .campusphoto {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
+    .photogrid {
+       grid-template-columns: repeat(2, 1fr);
+       gap: 10px;
+       padding: 10px;
+       justify-items: center;
     }
+
+    .photolist {
+       width: 100%;
+    }
+
 }
 
-/* Tussenliggende schermen */
 @media (max-width: 1050px) {
     .campusphotogrid {
         gap: 20px;
