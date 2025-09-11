@@ -1,11 +1,15 @@
 body {
     background: rgb(35, 35, 35);
-    font-family: MonsterratSemiBold;
+    font-family: MontserratSemiBold, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
 }
 
-h1, h3, h4{
+h1, h3, h4 {
     text-align: center;
     color: white;
+    margin: 0.5em 0;
 }
 
 h2 {
@@ -16,11 +20,12 @@ h2 {
 
 p {
     color: white;
+    margin: 5px 0;
 }
 
 @font-face {
-  font-family: MonsterratSemiBold;
-  src: url(../assets/font/Montserrat-Regular.ttf);
+    font-family: MontserratSemiBold;
+    src: url(../assets/font/Montserrat-Regular.ttf);
 }
 
 .photogrid {
@@ -62,16 +67,15 @@ p {
 }
 
 .campus-wrapper {
-  max-width: calc(4 * 300px + 3 * 85px);
-  margin: 0 auto;
+    max-width: calc(4 * 300px + 3 * 135px);
+    margin: 0 auto;
 }
 
 .campusphotogrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 85px;
-  justify-content: center;
-  place-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    place-items: center;
 }
 
 .campusphotolist {
@@ -92,13 +96,82 @@ p {
     object-fit: cover;
 }
 
-@media (width <= 600px) {
-  h2 {
-    margin-left: 0px;
-    text-align: center;
-  }
+.link-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
 
-  .campusphotogrid {
-    place-items: center;
-  }
+.link-wrapper a {
+    color: white;
+    text-decoration: none;
+    background-color: #444;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: MontserratSemiBold, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.link-wrapper a:hover {
+    background-color: #666;
+}
+
+
+@media (max-width: 550px) {
+    h2 {
+        margin-left: 0px;
+        text-align: center;
+    }
+    .campus-wrapper {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .campusphotogrid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 10px;
+        padding-left: 10px;
+    }
+
+    .campusphotolist {
+        flex: 0 0 250px;
+        height: 200px;
+        scroll-snap-align: start;
+        border-radius: 20px;
+        background-color: #333;
+        overflow: hidden;
+    }
+
+    .photogrid {
+       grid-template-columns: repeat(2, 1fr);
+       gap: 10px;
+       padding: 10px;
+       justify-items: center;
+    }
+
+    .photolist {
+       width: 100%;
+    }
+
+}
+
+@media (max-width: 1050px) {
+    .campusphotogrid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1437px) {
+    .campusphotogrid {
+        gap: 20px;
+    }
 }
