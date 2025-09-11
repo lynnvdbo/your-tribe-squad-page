@@ -1,6 +1,6 @@
 
 body{
-    background-color: beige;
+    background-color: rgb(243, 243, 225);
     margin: 0;
 }
 
@@ -10,15 +10,23 @@ main{
 }
 
 header{
-    background-color: rgb(255, 194, 96);
-
+    background-color: rgb(157, 173, 255);
     padding-bottom: 5px;
+}
 
+#mijnZoekbalk {
+  padding: 10px; /* Voegt ruimte toe binnen de zoekbalk */
+  border-radius: 5px; /* Maakt de hoeken rond */
+  font-size: 15px; /* Stel de lettergrootte in */
+  background: #f8fafe; /* Achtergrondkleur */
+  border: 1px solid #ddd; /* Voegt een lichte rand toe */
+  width: 200px; /* Stel de breedte in */
+ 
 }
 
 h1 {
     text-align: center;
-    font-size: 33pt;
+    font-size: 35pt;
     padding-top: 20px;
     padding-bottom: 20px;
     margin: 0;
@@ -28,6 +36,8 @@ h1 {
 
 h2 {
     margin-left: 25px;
+    margin-top: 45px;
+    font-size: 35px;
 }
 
 
@@ -44,9 +54,9 @@ p {
 }
 
 
-
 .photogrid {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
     overflow-x: auto;
     padding: 20px;
     gap: 50px;
@@ -101,7 +111,7 @@ p {
     flex: 0 0 auto;
     width: 250px;
     height: 190px;
-    border-radius: 20px;
+    border-radius: 15px;
     overflow: hidden;
     background-color: #333;
     display: flex;
@@ -109,6 +119,7 @@ p {
     justify-content: center;
     scroll-snap-align: start;
 }
+
 
 
 .campusphoto {
@@ -131,4 +142,63 @@ p {
 .photogrid::-webkit-scrollbar-thumb:hover,
 .campusphotogrid::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}   
+
+.carousel::-webkit-scrollbar-button {
+    content: 'right';
+    border: none;
+    background-color: #888;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3rem;
+    color: wheat;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding-bottom: 1em;
+
+}
+    
+
+
+
+.carousel {
+    width: 100%;
+    overflow-x: auto;
+    margin: 3em auto;
+    display: flex;
+    gap: 2em;
+    scroll-marler-group: after;
+}
+
+.carousel::scroll-marker-group {
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+}
+
+.gebouw::scroll-marker {
+    content: '';
+    height: 1em;
+    width: 1em;
+    background-color:#888;
+}
+
+.gebouw {
+    flex: 0 0 20em;
+    height: 12em;
+    background-color:#888;
+    padding: 1em;
+    border-radius: .5em;
+    text-align: center;
+    align-content: center;
+}
+
+@media(max-width: 500px) {
+    .carousel {
+        flex: 0 0 100%;
+    }
+
 }
