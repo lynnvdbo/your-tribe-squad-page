@@ -175,4 +175,23 @@ p {
     .photolist {
         width: 100%;
     }
+    
+}
+
+/* ====== Naam-links altijd wit ====== */
+.name a,
+.name a:link,
+.name a:visited,
+.name a:hover,
+.name a:active,
+.name a:focus {
+  color: white;           /* blijft altijd wit */
+  text-decoration: none;  /* geen underline standaard */
+  font-weight: bold;
+}
+
+.name a:hover,
+.name a:focus-visible {
+  text-decoration: underline; /* underline bij hover/focus */
+  outline: none;
 }
