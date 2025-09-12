@@ -1,83 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Squad Page 1J</title>
-    <link rel="stylesheet" href="styles/style_Jasin.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Squad Page 1J</title>
+  <!-- Optioneel: mooi lettertype -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style_Jasin.css" />
 </head>
 <body>
 
+  <div class="page">
     <h1>Squad Page 1J</h1>
 
     <h2>Ontdek Amstel Campus</h2>
 
-    <div class="carousel-wrapper">
-        <button class="carousel-btn left" onclick="scrollCampus(-1)">&#10094;</button>
+    <!-- Campus met pijltjes -->
+    <div class="campus-wrapper" style="position: relative;">
+      <button class="arrow-btn left" aria-label="Scroll links" onclick="scrollCampus(-1)">&#10094;</button>
 
-        <section class="campusphotogrid" id="campusCarousel">
-            <article class="campusphotolist">
-                <img src="assets/img/theo-thijssenhuis-hva-amsterdam.jpeg" alt="Theo Thijssenhuis" class="campusphoto" />
-            </article>
-            <article class="campusphotolist">
-                <img src="assets/img/jakoba mulderhuis hva.jpg" alt="Jakoba Mulderhuis" class="campusphoto" />
-            </article>
-            <article class="campusphotolist">
-                <img src="assets/img/Kohn.png" alt="Kohn gebouw" class="campusphoto" />
-            </article>
-            <article class="campusphotolist">
-                <img src="assets/img/wibauthuis hva.jpg" alt="Wibauthuis" class="campusphoto" />
-            </article>
+      <section class="campusphotogrid" id="campusCarousel">
+        <article class="campusphotolist">
+          <img src="assets/img/theo-thijssenhuis-hva-amsterdam.jpeg" alt="Theo Thijssenhuis" class="campusphoto" />
+        </article>
+        <article class="campusphotolist">
+          <img src="assets/img/jakoba mulderhuis hva.jpg" alt="Jakoba Mulderhuis" class="campusphoto" />
+        </article>
+        <article class="campusphotolist">
+          <img src="assets/img/Kohn.png" alt="Kohn gebouw" class="campusphoto" />
+        </article>
+        <article class="campusphotolist">
+          <img src="assets/img/wibauthuis hva.jpg" alt="Wibauthuis" class="campusphoto" />
+        </article>
+        <article class="campusphotolist">
+          <img src="assets/img/Media (4).jpg" alt="Uitzicht Amstel Campus 1" class="campusphoto" />
+        </article>
+        <article class="campusphotolist">
+          <img src="assets/img/Media (3).jpg" alt="Uitzicht Amstel Campus 2" class="campusphoto" />
+        </article>
+        <article class="campusphotolist">
+          <img src="assets/img/wibauthuis.jpg" alt="Wibauthuis bovenaanzicht" class="campusphoto" />
+        </article>
+        <article class="campusphotolist">
+          <img src="assets/img/shared image.jpg" alt="Kohn Uitzicht" class="campusphoto" />
+        </article>
+      </section>
 
-            <!-- ✅ Extra 3 nieuwe foto's -->
-            <article class="campusphotolist">
-                <img src="assets/img/Media (4).jpg"alt="Uitzicht" class="campusphoto" />
-            </article>
-            <article class="campusphotolist">
-                <img src="assets/img/Media (3).jpg" alt="Uitzicht" class="campusphoto" />
-            </article>
-            <article class="campusphotolist">
-                <img src="assets/img/wibauthuis.jpg" alt="Uitzicht" class="campusphoto" />
-            </article>
-        </section>
-
-        <button class="carousel-btn right" onclick="scrollCampus(1)">&#10095;</button>
+      <button class="arrow-btn right" aria-label="Scroll rechts" onclick="scrollCampus(1)">&#10095;</button>
     </div>
-
-    <hr/>
 
     <h3>Over ons</h3>
 
     <section class="photogrid">
-        <article class="photolist">
-            <div class="personphoto-wrapper">
-                <img src="assets/img/temp_icon.jpg" alt="" class="scrollphoto" />
-            </div>
-            <p class="name">Naam</p>
-        </article>
-        <article class="photolist">
-            <div class="personphoto-wrapper">
-                <img src="assets/img/temp_icon.jpg" alt="" class="scrollphoto" />
-            </div>
-            <p class="name">Naam</p>
-        </article>
-        <article class="photolist">
-            <div class="personphoto-wrapper">
-                <img src="assets/img/temp_icon.jpg" alt="" class="scrollphoto" />
-            </div>
-            <p class="name">Naam</p>
-        </article>
-    </section>
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Ahlam.JPG" alt="Ahlam" class="scrollphoto" />
+        </div>
+       <p class="name"><a href="https://addaahva.github.io/your-tribe-profile-card/">Ahlam</a></p>
 
-    <script>
-        function scrollCampus(direction) {
-            const carousel = document.getElementById("campusCarousel");
-            const scrollAmount = 270; // breedte van 1 foto + marge
-            carousel.scrollBy({
-                left: direction * scrollAmount,
-                behavior: "smooth"
-            });
-        }
-    </script>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Anass.JPG" alt="Anass" class="scrollphoto" />
+        </div>
+       <p class="name"><a href="https://anass-kh.github.io/your-tribe-profile-card/">Anass</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Ayoub.JPG" alt="Ayoub" class="scrollphoto" />
+        </div>
+        <p class="name"><a href="https://ayoubkh1.github.io/your-tribe-profile-card/">Ayoub</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Bronx-1.JPG" alt="Bronx" class="scrollphoto" />
+        </div>
+      <p class="name"><a href="https://bronxpostma13.github.io/your-tribe-profile-card/">Bronx</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Chama.JPG" alt="Chama" class="scrollphoto" />
+        </div>
+   <p class="name"><a href="https://chewsy.github.io/visitekaartje/">Chama</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Heba.JPG" alt="Heba" class="scrollphoto" />
+        </div>
+        <p class="name"><a href="https://handouh1.github.io/your-tribe-profile-card/">Heba</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Iman.JPG" alt="Iman" class="scrollphoto" />
+        </div>
+       <p class="name"><a href="file:///C:/Users/jaasi/OneDrive/Documenten/GitHub/your-tribe-squad-page/index_gestopt.html">Iman</a></p>
+         <a class="clickhere" href="file:///C:/Users/jaasi/OneDrive/Documenten/GitHub/your-tribe-squad-page/index_gestopt.html">Klik hier</a>
+       </p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Jadon.JPG" alt="Jadon" class="scrollphoto" />
+        </div>
+        <p class="name"><a href="https://jadonfdnd.github.io/your-tribe-profile-card/">Jadon</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Jamie.JPG" alt="Jamie" class="scrollphoto" />
+        </div>
+        <p class="name"><a href="https://jamievos991.github.io/HVA-Visitekaartje/">Jamie</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Jamil.JPG" alt="Jamil" class="scrollphoto" />
+        </div>
+        <p class="name"><a href="file:///C:/Users/jaasi/OneDrive/Documenten/GitHub/your-tribe-squad-page/index_gestopt.html">Jamil</a></p>
+          <a class="clickhere" href="file:///C:/Users/jaasi/OneDrive/Documenten/GitHub/your-tribe-squad-page/index_gestopt.html">Klik hier</a>
+        </p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Jasin-2.JPG" alt="Jasin" class="scrollphoto" />
+        </div>
+        <p class="name"><a href="https://jasinahmed.github.io/your-tribe-profile-card/">Jasin</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Julian.JPG" alt="Julian" class="scrollphoto" />
+        </div>
+        <p class="name"><a href="https://juliandavelaar.github.io/your-tribe-profile-card/">Julian</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Ké.JPG" alt="Ké" class="scrollphoto" />
+        </div>
+        <p class="name"><a href="https://kebiemen.github.io/your-tribe-profile-card/">Ké</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Kevin.JPG" alt="Kevin" class="scrollphoto" />
+        </div>
+       <p class="name"><a href="https://toasterbath0758.github.io/your-tribe-profile-card/">Kevin</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Kurollos.JPG" alt="Kurollos" class="scrollphoto" />
+        </div>
+        <p class="name"><a href="https://kurollos.github.io/your-tribe-profile-card/">Kurrollos</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Luc.JPG" alt="Luc" class="scrollphoto" />
+        </div>
+     <p class="name"><a href="file:///C:/Users/jaasi/OneDrive/Documenten/GitHub/your-tribe-squad-page/index_gestopt.html">Luc</a></p>
+         <a class="clickhere" href="file:///C:/Users/jaasi/OneDrive/Documenten/GitHub/your-tribe-squad-page/index_gestopt.html">Klik hier</a>
+       </p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Luka.JPG" alt="Luka" class="scrollphoto" />
+        </div>
+       <p class="name"><a href="https://millie8969.github.io/lmd-profile-card">Luka</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Lynn.JPG" alt="Lynn" class="scrollphoto" />
+        </div>
+      <p class="name"><a href="https://lynnvdbo.github.io/your-tribe-profile-card/">Lynn</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Maarten.JPG" alt="Maarten" class="scrollphoto" />
+        </div>
+       <p class="name"><a href="https://maartentepoele.github.io/your-tribe-profile-card/">Maarten</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Mathijs.JPG" alt="Mathijs" class="scrollphoto" />
+        </div>
+        <p class="name"><a href="https://mathijsn.github.io/your-tribe-profile-card/">Mathijs</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Meraichio.JPG" alt="Meraichio" class="scrollphoto" />
+        </div>
+        <p class="name"><a href="https://merradev.github.io/your-tribe-profile-card/">Meraichio</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Mete.jpeg" alt="Mete" class="scrollphoto" />
+        </div>
+        <p class="name"><a href="https://mete2004.github.io/your-tribe-profile-card/">Mete</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Sadaf.JPG" alt="Sadaf" class="scrollphoto" />
+        </div>
+        <p class="name"><a href="https://sadaf-design.github.io/your-tribe-profile-card/">Sadaf</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Sieuwke.JPG" alt="Sieuwke" class="scrollphoto" />
+        </div>
+       <p class="name"><a href="https://sieuwkesheta.github.io/your-tribe-profile-card/">Sieuwke</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Tom.JPG" alt="Tom" class="scrollphoto" />
+        </div>
+        <p class="name"><a href="https://tzgaming.github.io/your-tribe-profile-card/">Tom</a></p>
+      </article>
+
+      <article class="photolist">
+        <div class="personphoto-wrapper">
+          <img src="assets/img/Squad1J-Yassine.JPG" alt="Yassine" class="scrollphoto" />
+        </div>
+        <p class="name"><a href="https://yassineak1.github.io/your-tribe-profile-card/">Yassine</a></p>
+      </article>
+    </section>
+  </div>
+
+  <!-- Scroll-script voor campus-pijltjes -->
+  <script>
+    function scrollCampus(direction) {
+      const carousel = document.getElementById("campusCarousel");
+      const scrollAmount = 250; // pixels per klik
+      carousel.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  </script>
+
 </body>
 </html>

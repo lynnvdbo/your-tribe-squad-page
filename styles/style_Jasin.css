@@ -1,16 +1,31 @@
 /* ====== Basis ====== */
-h1, h3 {
+body { 
+    margin: 0; 
+    background-color: beige; /* achtergrond beige */
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+h1 {
     text-align: center;
-    background-color: aqua;
-    margin: 0;
+    margin: 20px 0;
+    font-size: clamp(28px, 4vw, 40px);
+    color: #000; /* zwart */
 }
 
 h2 { 
-    margin-left: 25px; 
+    text-align: center;
+    margin: 20px 0;
+    font-size: clamp(22px, 3vw, 28px);
+    color: #000;
 }
 
-body { 
-    margin: 0; 
+h3 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: clamp(24px, 3vw, 32px); /* groter gemaakt */
+    font-weight: bold;
+    color: #000;
 }
 
 p { 
@@ -21,11 +36,12 @@ p {
 .photogrid {
     display: grid;
     grid-auto-rows: auto;
-    grid-template-columns: repeat(auto-fill, 180px); /* vaste breedte */
+    grid-template-columns: repeat(auto-fill, 180px); 
     gap: 20px;
-    justify-content: start;
+    justify-content: center;  /* ✅ gecentreerd */
     padding: 20px;
     overflow: visible;
+    position: relative;
 }
 
 .photolist {
@@ -34,13 +50,12 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    scroll-snap-align: start;
-    width: 180px;          /* vaste tegelbreedte */
+    width: 180px;
 }
 
 .personphoto-wrapper {
     width: 100%;
-    aspect-ratio: 1/1;     /* vierkant */
+    aspect-ratio: 1/1; 
     border-radius: 20px;
     overflow: hidden;
     background-color: transparent;
@@ -54,7 +69,7 @@ p {
 
 .name {
     margin-top: 8px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     color: white;
@@ -68,13 +83,15 @@ p {
     gap: 20px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    align-items: stretch;  /* alles gelijk */
+    align-items: stretch;
+    justify-content: center;
+    position: relative;
 }
 
 .campusphotolist {
     flex: 0 0 auto;
-    max-width: 220px;      /* 🔽 kleiner gemaakt */
-    aspect-ratio: 16/9;    /* vaste verhouding */
+    max-width: 220px;
+    aspect-ratio: 16/9;
     height: auto;
     border-radius: 12px;
     overflow: hidden;
@@ -88,110 +105,107 @@ p {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transform: none !important; /* geen scheef trekken */
 }
 
-/* ====== Scrollbar styling (optioneel) ====== */
-.photogrid::-webkit-scrollbar,
-.campusphotogrid::-webkit-scrollbar {
-    height: 8px;
-}
-
-.photogrid::-webkit-scrollbar-thumb,
-.campusphotogrid::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 4px;
-}
-
-.photogrid::-webkit-scrollbar-thumb:hover,
-.campusphotogrid::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-/* ====== Carrousel knoppen (voor campus) ====== */
-.carousel-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.carousel-btn {
+/* ====== Pijltjes (alleen mobiel zichtbaar) ====== */
+.arrow-btn {
+    display: none;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.6);
-    color: white;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
     border: none;
-    padding: 10px;
+    font-size: 20px;
+    padding: 8px 12px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 18px;
-    z-index: 10;
+    z-index: 100;
 }
-.carousel-btn.left { left: 5px; }
-.carousel-btn.right { right: 5px; }
 
-/* ====== LAPTOP/DESKTOP (≥768px) ====== */
+.arrow-btn.left { left: 10px; }
+.arrow-btn.right { right: 10px; }
+
+/* ====== Responsiveness ====== */
 @media (min-width: 768px) {
-    .carousel-wrapper { 
-        display: block; 
-        width: 100%; 
-    }
-
     .campusphotogrid {
         display: grid !important;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* 🔽 kleiner */
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
         overflow-x: visible;
+        justify-content: center;
     }
 
     .campusphotolist {
-        max-width: 220px;   /* 🔽 kleiner houden */
-        aspect-ratio: 16/9;
-        height: auto;
+        max-width: none;
+        width: 100%;
     }
 
     .photogrid {
         display: grid !important;
         grid-template-columns: repeat(auto-fill, 180px);
         gap: 20px;
-        overflow-x: visible;
-    }
-
-    .photolist {
-        width: 180px;
-    }
-
-    .carousel-btn { 
-        display: none !important; 
+        justify-content: center;
     }
 }
 
-/* ====== MOBIEL (≤767px) ====== */
 @media (max-width: 767px) {
-    /* Campus blijft scrollbaar */
+    /* ✅ Campus scrollbaar met pijltjes */
     .campusphotogrid {
         display: flex !important;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
     }
     .campusphotolist { 
         flex: 0 0 auto; 
-        max-width: 160px;   /* 🔽 kleiner op mobiel */
+        max-width: 160px;
+        scroll-snap-align: start;
     }
-    .carousel-btn { display: inline-flex; }
+    .arrow-btn { display: block; }
 
-    /* Over ons: 2 kolommen */
+    /* ✅ Over ons blijft 2 naast elkaar */
     .photogrid {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
-        justify-content: stretch;
-        padding: 20px;
+        justify-content: center;
     }
     .photolist {
         width: 100%;
-        max-width: none;
     }
+    
+}
+
+/* ====== Naam-links altijd wit ====== */
+.name a,
+.name a:link,
+.name a:visited,
+.name a:hover,
+.name a:active,
+.name a:focus {
+  color: white;           /* blijft altijd wit */
+  text-decoration: none;  /* geen underline standaard */
+  font-weight: bold;
+}
+
+.name a:hover,
+.name a:focus-visible {
+  text-decoration: underline; /* underline bij hover/focus */
+  outline: none;
+}
+
+/* ====== "Klik hier"-link stijl ====== */
+.clickhere {
+  color: lightblue;
+  font-size: 20px;       /* 🔥 groter gemaakt */
+  font-weight: bold;     /* extra opvallend */
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.clickhere:hover {
+  color: yellow;
 }
