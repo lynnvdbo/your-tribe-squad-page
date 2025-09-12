@@ -137,7 +137,6 @@ img {
     margin: 3em auto;
     display: flex;
     gap: 2em;
-    scroll-marler-group: after;
 }
 
 .gebouw {
