@@ -54,16 +54,18 @@ p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.name { /* namen studenten */
+.name {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
     background-color: #9dadff;
     color: #000000;
     padding: 5px 10px; 
     border-radius: 15%;
-    margin-top: 8px;
+    margin-top: 17px;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    margin-top: 17px;
 }
 
 a {
@@ -97,6 +99,7 @@ a {
     align-items: center;
     scroll-snap-align: start;
     border: 4px solid #9dadff;
+    text-align: center; /* voeg dit toe */
 }
 
 .personphoto-wrapper { /* vorm 'over ons' fotos */
