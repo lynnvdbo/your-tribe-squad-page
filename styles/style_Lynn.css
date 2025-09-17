@@ -125,16 +125,20 @@ p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.name { /* namen studenten */
+.name {
     background-color: #9dadff;
     color: #000000;
     padding: 5px 10px; 
     border-radius: 15%;
-    margin-top: 8px;
+    margin-top: 17px;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    margin-top: 17px;
+
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a {
