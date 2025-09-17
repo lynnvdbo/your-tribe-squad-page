@@ -15,6 +15,11 @@ header{
     padding-bottom: 5px;
 }
 
+.zoek-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
 #mijnZoekbalk {
   padding: 6px; 
   border-radius: 5px; 
@@ -22,8 +27,6 @@ header{
   background: #f8fafe; 
   border: 1px solid #ddd; 
   width: 200px; 
-  text-align:left;
-  justify-content: right;
 }
 
 h1 {
