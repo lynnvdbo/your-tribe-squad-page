@@ -34,6 +34,11 @@ header{
     padding-bottom: 5px;
 }
 
+.zoek-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
 #mijnZoekbalk {
   padding: 6px; 
   border-radius: 5px; 
@@ -41,8 +46,6 @@ header{
   background: #f8fafe; 
   border: 1px solid #ddd; 
   width: 200px; 
-  text-align:left;
-  justify-content: right;
 }
 
 h1 {
@@ -174,3 +177,13 @@ img {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
+  
+@media (max-width: 600px) {
+  main { padding: 0 14px; }
+  h1 { font-size: 20pt; }
+  h2, h3 { font-size: 22px; text-align: left; }
+  #mijnZoekbalk { width: 100%; box-sizing: border-box; }
+  .photogrid { grid-template-columns: 1fr; gap: 14px; }  /* 1 kolom */
+  .gebouw { flex: 0 0 90vw; height: 10em; }
+  img { max-width: 100%; height: auto; }
+}
