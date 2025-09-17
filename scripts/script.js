@@ -9,6 +9,7 @@
         const naamElement = profiel.querySelector(".name");
         const naam = naamElement.textContent.toLowerCase();
 
+        // Alleen tonen als de naam BEGINT met de zoekterm
         if (naam.startsWith(zoekTerm)) {
           profiel.style.display = "block";
         } else {
