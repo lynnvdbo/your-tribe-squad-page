@@ -287,6 +287,15 @@ a {
 }
 
 .scrollphoto:hover {
+    scale: 1.05;
+}
+
+.slide {
+    scale: 1;
+    transition: scale 0.25s;
+}
+
+.slide:hover {
     scale: 1.1;
 }
 
