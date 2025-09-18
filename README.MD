@@ -12,6 +12,8 @@ de website is volledig responsive gemaakt.
 
 Hierbij de link naar onze squadpage: https://edu.nl/umauq
 
+
+Mockup - Telefoon
 https://icthva-my.sharepoint.com/:i:/g/personal/lynn_van_den_bosch_hva_nl/EUOBAkZ14AdEkvkndcFwkBgBQCtudRgn4jZCLUK2UxAs8g?e=7XhAzt
 
 
