@@ -1,10 +1,13 @@
+# Squad 1J
 
-# Squad page
+Wij zijn Profilia. Wij zijn begonnen aan het project Squadpage. Dit houdt in dat wij een pagina hebben gemaakt met al onze visitekaartjes van 1J, zodat iedereen elkaar beter kan leren kennen.
 
-Ontwerp en maak met een team een Squad Page met HTML, CSS en JS.
+Drie features waar wij trots op zijn:
 
-De instructie van deze leertaak staan in de [INSTRUCTIONS](https://github.com/fdnd-task/your-tribe-squad-page/blob/main/docs/INSTRUCTIONS.md)
+een zoekbalk die we werkend hebben gemaakt met JavaScript,
 
-## Licentie
+een carrousel die we hebben gebouwd met CSS en HTML,
 
-This project is licensed under the terms of the [MIT license](./LICENSE).
+de website is volledig responsive gemaakt.
+
+Hierbij de link naar onze squadpage: https://edu.nl/umauq
