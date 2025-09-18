@@ -48,7 +48,7 @@ main{
 }
 
 .slide {
-  height: 200px; 
+  height: 222px; 
   width: 250px;
   display: flex;
   align-items: center;
@@ -59,6 +59,10 @@ main{
 img {
   width: 100%;
   transition: transform 1s;
+}
+
+img:hover {
+  transform: translateZ(20px);
 }
 
 
@@ -287,15 +291,6 @@ a {
 }
 
 .scrollphoto:hover {
-    scale: 1.05;
-}
-
-.slide {
-    scale: 1;
-    transition: scale 0.25s;
-}
-
-.slide:hover {
     scale: 1.1;
 }
 
