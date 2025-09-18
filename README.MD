@@ -20,9 +20,11 @@ https://icthva-my.sharepoint.com/:i:/g/personal/lynn_van_den_bosch_hva_nl/EUOBAk
 
 https://icthva-my.sharepoint.com/:i:/g/personal/lynn_van_den_bosch_hva_nl/EaUQICZSADNDuZX_c22VUpcB-2k2O7nVM7HQozzXK8zf2A?e=sbd0Wd
 
+Mockup - Laptop
+https://icthva-my.sharepoint.com/my?viewid=26c9226d%2Df6e3%2D43c0%2D9cd9%2D33df511c39dd&ga=1&id=%2Fpersonal%2Flynn%5Fvan%5Fden%5Fbosch%5Fhva%5Fnl%2FDocuments%2FChatbestanden%20van%20Microsoft%20Teams%2Fmockuplaptop%2Epng&parent=%2Fpersonal%2Flynn%5Fvan%5Fden%5Fbosch%5Fhva%5Fnl%2FDocuments%2FChatbestanden%20van%20Microsoft%20Teams
 
-
-
+Mockup - Ipad
+https://icthva-my.sharepoint.com/my?viewid=26c9226d%2Df6e3%2D43c0%2D9cd9%2D33df511c39dd&ga=1&id=%2Fpersonal%2Flynn%5Fvan%5Fden%5Fbosch%5Fhva%5Fnl%2FDocuments%2FChatbestanden%20van%20Microsoft%20Teams%2Fmockupipad%2Epng&parent=%2Fpersonal%2Flynn%5Fvan%5Fden%5Fbosch%5Fhva%5Fnl%2FDocuments%2FChatbestanden%20van%20Microsoft%20Teams
 
 Wij zijn Profilia en we willen leren hoe we beter kunnen coderen. Daarom bundelen we onze krachten en werken we samen. Ons team bestaat uit drie mensen:
 
