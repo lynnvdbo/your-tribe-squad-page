@@ -121,6 +121,10 @@ p {
     background-color: #666;
 }
 
+.lynnpage {
+    text-align: center;
+}
+
 
 @media (max-width: 550px) {
     h2 {
