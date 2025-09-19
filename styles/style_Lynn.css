@@ -20,7 +20,7 @@ main{
   padding-top: 8px;
 }
  
-
+/*Campus caroussel*/
 .slidercampus {
   height: 250px;
   margin: auto;
@@ -29,7 +29,6 @@ main{
   display: grid;
   place-items: center;
   overflow: hidden;
-
 }
 
 .slide-track {
@@ -53,7 +52,15 @@ main{
   display: flex;
   align-items: center;
   padding: 15px;
+}
 
+.slide {
+    scale: 1;
+    transition: scale 0.25s;
+}
+
+.slide:hover {
+    scale: 1.1;
 }
 
 img {
@@ -93,9 +100,7 @@ img:hover {
 
 }
 
-
-
-
+/*Fade-in animatie*/
 @keyframes pageload {
   0% {
     transform: translateY(100%);
@@ -114,6 +119,7 @@ img:hover {
   animation-timing-function: ease-out;
 }
 
+/*Delay voor elke kaart*/
 .photogrid .photolist:nth-child(1)  { animation-delay: 0s; }
 .photogrid .photolist:nth-child(2)  { animation-delay: 0.05s; }
 .photogrid .photolist:nth-child(3)  { animation-delay: 0.1s; }
@@ -228,7 +234,6 @@ p {
 }
 
 
-
 a {
   text-decoration: none;
 }
@@ -336,7 +341,7 @@ img {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
-  
+/*Telefoon scherm*/
 @media (max-width: 600px) {
   main { padding: 0 14px; }
   h1 { font-size: 20pt; }
